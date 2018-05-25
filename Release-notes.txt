@@ -1,0 +1,7 @@
+Features
+****************************************************
+> On the go search which provides results as per the keyword typed.
+> Improved performance which avoids overload of data.
+> Easy user interface which can be easily understandable.
+> Mobile friendly
+

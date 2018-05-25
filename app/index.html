@@ -19,7 +19,7 @@
 
 <body ng-app="app" ng-controller="videoController">
     <div class="col-md-12 col-sm-12 col-xs-12 image" style="background-image: url('../assets/images/nav_bar.png')">
-        <img class="col-md-1 col-sm-1 col-xs-1 backarrow img-responsive nopadd" src="..\assets\images\Back.png" />
+        <img class="col-md-1 col-sm-1 col-xs-1 backarrow img-responsive nopadd" src="../assets/images/Back.png" />
         <div class="col-md-5 col-sm-5 col-xs-4 title nopadd">{{videoData.page.title}}</div>
         <div class="searchbox">
             <input type="search" placeholder="Search......" name="search" ng-model="searchword" class="searchbox-input" onkeyup="buttonUp();" required>
@@ -30,8 +30,8 @@
         <!-- <img class="col-md-1 col-sm-1 col-xs-1 search img-responsive nopadd" src="..\assets\images\search.png" /> -->
     </div>
     <div class="col-md-12 col-sm-12 col-xs-12 totaldiv nopadd" infinite-scroll='loadMore()' infinite-scroll-distance='2'>
-        <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="y in tiles">
-            <div class="col-md-4 col-sm-4 col-xs-4 tilediv nopadd" ng-repeat="x in y|filter:searchword">
+        <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="y in tiles track by $index">
+            <div class="col-md-4 col-sm-4 col-xs-4 tilediv nopadd" ng-repeat="x in y|filter:searchword track by $index">
                 <img class="col-md-12 col-sm-12 col-xs-12 tileimg" ng-src="..\assets\images\{{x['poster-image']}}" />
                 <div class="tiletitle col-md-12 col-sm-12 col-xs-12">{{x.name}}</div>
             </div>
