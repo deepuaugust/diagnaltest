@@ -29,7 +29,7 @@
             <!-- <input type="text" id="searchtext" ng-model="searchword" /> -->
         <!-- <img class="col-md-1 col-sm-1 col-xs-1 search img-responsive nopadd" src="..\assets\images\search.png" /> -->
     </div>
-    <div class="col-md-12 col-sm-12 col-xs-12 totaldiv nopadd" infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+    <div class="col-md-12 col-sm-12 col-xs-12 totaldiv nopadd">
         <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="y in tiles track by $index">
             <div class="col-md-4 col-sm-4 col-xs-4 tilediv nopadd" ng-repeat="x in y|filter:searchword track by $index">
                 <img class="col-md-12 col-sm-12 col-xs-12 tileimg" ng-src="..\assets\images\{{x['poster-image']}}" />
